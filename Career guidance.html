@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Home | Career Guidance Help Desk</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <!-- Font Awesome for Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+  <style>
+    /* Hero Section */
+    .hero {
+      text-align: center;
+      padding: 5rem 1rem;
+      background: linear-gradient(to right, #004466, #00bcd4);
+      color: white;
+      border-radius: 10px;
+      box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+    }
+
+    .hero h2 {
+      font-size: 3rem;
+      font-weight: bold;
+      margin-bottom: 1rem;
+      text-transform: uppercase;
+      background: linear-gradient(to right, #ff5722, #ff9800);
+      -webkit-background-clip: text;
+      color: transparent;
+    }
+
+    .hero p {
+      font-size: 1.3rem;
+      max-width: 700px;
+      margin: 1rem auto;
+      line-height: 1.6;
+      color: #f0f8ff;
+    }
+
+    .hero a {
+      display: inline-block;
+      margin-top: 1.5rem;
+      padding: 1rem 2rem;
+      background-color: #ff5722;
+      color: white;
+      border-radius: 5px;
+      text-decoration: none;
+      font-size: 1.1rem;
+      transition: background-color 0.3s ease-in-out;
+    }
+
+    .hero a:hover {
+      background-color: #e64a19;
+    }
+
+    /* Navigation Styles */
+    nav {
+      display: flex;
+      justify-content: center;
+      background-color: #004466;
+      padding: 10px 0;
+    }
+
+    nav a {
+      display: flex;
+      align-items: center;
+      color: white;
+      font-size: 1.2rem;
+      margin: 0 15px;
+      text-decoration: none;
+      padding: 10px 20px;
+      border-radius: 5px;
+      transition: background-color 0.3s ease-in-out;
+    }
+
+    nav a:hover {
+      background-color: #00bcd4;
+    }
+
+    nav a i {
+      margin-right: 8px; /* Space between icon and text */
+      font-size: 1.5rem; /* Icon size */
+    }
+
+    /* Features Section */
+    .features {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 2rem;
+      padding: 3rem 1rem;
+      background-color: #f0f8ff;
+    }
+
+    .feature-card {
+      max-width: 320px;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      padding: 2rem;
+      background-color: #ffffff;
+      box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .feature-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 15px 25px rgba(0, 0, 0, 0.1);
+    }
+
+    .feature-card h3 {
+      color: #004466;
+      font-size: 1.8rem;
+      margin-bottom: 1rem;
+      text-transform: uppercase;
+      background: linear-gradient(to right, #00bcd4, #004466);
+      -webkit-background-clip: text;
+      color: transparent;
+    }
+
+    .feature-card p {
+      font-size: 1rem;
+      color: #333;
+      line-height: 1.5;
+    }
+
+    /* Footer */
+    footer {
+      background-color: #004466;
+      color: white;
+      text-align: center;
+      padding: 1rem;
+      margin-top: 3rem;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Career Guidance Help Desk</h1>
+    <nav>
+      <a href="index.html"><i class="fas fa-home"></i>Home</a>
+      <a href="about.html"><i class="fas fa-info-circle"></i>About</a>
+      <a href="carers.html"><i class="fas fa-briefcase"></i>Careers</a>
+      <a href="contact.html"><i class="fas fa-envelope"></i>Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+      <h2>Welcome to Career Guidance Help Desk</h2>
+      <p>Your one-stop platform for discovering the best career options after 12th — Science, Commerce, or Arts.</p>
+      <a href="up.html/upp.html">Explore Careers</a>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features" id="features">
+      <div class="feature-card">
+        <h3>Stream-Based Guidance</h3>
+        <p>Get career options based on your stream like Science, Commerce, or Arts.</p>
+      </div>
+      <div class="feature-card">
+        <h3>Exam & Course Info</h3>
+        <p>Find details about entrance exams, courses, and required qualifications.</p>
+      </div>
+      <div class="feature-card">
+        <h3>Ask for Help</h3>
+        <p>Use our contact form or WhatsApp link to ask any career-related question.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 Career Help Desk | Guiding You to the Right Future</p>
+  </footer>
+
+  <!-- JavaScript -->
+  <script>
+    // Smooth Scrolling for Navigation Links
+    const navLinks = document.querySelectorAll('nav a');
+    navLinks.forEach(link => {
+      link.addEventListener('click', (e) => {
+        e.preventDefault();
+        const targetId = link.getAttribute('href').substring(1);
+        const targetElement = document.getElementById(targetId);
+        
+        window.scrollTo({
+          top: targetElement.offsetTop - 80, // 80px offset for header
+          behavior: 'smooth'
+        });
+      });
+    });
+
+    // Hover Effect for the Hero Section (Color change on mouse hover)
+    const heroSection = document.querySelector('.hero');
+    heroSection.addEventListener('mouseenter', () => {
+      heroSection.style.background = 'linear-gradient(to right, #00bcd4, #004466)';
+    });
+    heroSection.addEventListener('mouseleave', () => {
+      heroSection.style.background = 'linear-gradient(to right, #004466, #00bcd4)';
+    });
+
+    // Scroll Animations for Feature Cards (Fade In)
+    const featureCards = document.querySelectorAll('.feature-card');
+    window.addEventListener('scroll', () => {
+      featureCards.forEach(card => {
+        const cardPosition = card.getBoundingClientRect().top;
+        const windowHeight = window.innerHeight;
+        
+        if (cardPosition < windowHeight - 100) {
+          card.style.opacity = '1';
+          card.style.transform = 'translateY(0)';
+          card.style.transition = 'opacity 0.5s ease-out, transform 0.5s ease-out';
+        }
+      });
+    });
+
+    // Initial fade-in effect on page load for feature cards
+    featureCards.forEach(card => {
+      card.style.opacity = '0';
+      card.style.transform = 'translateY(50px)';
+    });
+  </script>
+</body>
+</html>
