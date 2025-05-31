@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Explore Careers by Stream | Career Guidance Help Desk</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background-color: #004466;
+      color: white;
+      padding: 1rem;
+      text-align: center;
+    }
+
+    nav {
+      margin-top: 0.5rem;
+    }
+
+    nav a {
+      color: white;
+      margin: 0 10px;
+      text-decoration: none;
+    }
+
+    .section-title {
+      background-color: #004466;
+      color: white;
+      padding: 0.5rem 1rem;
+      border-radius: 5px;
+      margin-top: 2rem;
+    }
+
+    .career-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
+      padding: 1rem 0;
+    }
+
+    .career-card {
+      border: 1px solid #ccc;
+      padding: 1rem;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      background-color: #f9f9f9;
+    }
+
+    .career-card h3 {
+      margin-top: 0;
+      color: #004466;
+    }
+
+    .career-card p {
+      font-size: 0.95rem;
+    }
+
+    footer {
+      background-color: #004466;
+      color: white;
+      text-align: center;
+      padding: 1rem;
+      margin-top: 2rem;
+    }
+
+    .language-select {
+      text-align: right;
+      padding: 1rem;
+    }
+
+    select {
+      padding: 5px 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Career Guidance Help Desk</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="careers.html">Explore Careers</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <div class="language-select">
+    <label for="language-select">Language: </label>
+    <select id="language-select" onchange="switchLanguage()">
+      <option value="en">English</option>
+      <option value="hi">हिन्दी</option>
+    </select>
+  </div>
+
+  <main>
+    <section>
+      <h2 style="text-align:center;">Career Options After 12th</h2>
+
+      <!-- Science Stream -->
+      <h3 class="section-title">Science Stream</h3>
+      <div class="career-container">
+        <div class="career-card">
+          <h3><span class="en">Doctor (MBBS)</span><span class="hi" style="display:none;">डॉक्टर (एमबीबीएस)</span></h3>
+          <p><span class="en">Medical professional treating patients. Requires NEET exam and MBBS degree.</span>
+             <span class="hi" style="display:none;">रोगियों का इलाज करने वाला चिकित्सा पेशेवर। इसके लिए NEET परीक्षा और MBBS डिग्री आवश्यक है।</span>
+          </p>
+        </div>
+        <div class="career-card">
+          <h3><span class="en">Engineer (B.Tech)</span><span class="hi" style="display:none;">इंजीनियर (बी.टेक)</span></h3>
+          <p><span class="en">Various branches: Computer, Civil, Mechanical, Electrical. Requires JEE or state-level entrance exams.</span>
+             <span class="hi" style="display:none;">कंप्यूटर, सिविल, मैकेनिकल, इलेक्ट्रिकल आदि शाखाएँ। इसके लिए JEE या राज्य स्तरीय प्रवेश परीक्षा आवश्यक है।</span>
+          </p>
+        </div>
+        <div class="career-card">
+          <h3><span class="en">Pharmacist</span><span class="hi" style="display:none;">फार्मासिस्ट</span></h3>
+          <p><span class="en">Works with medicine and healthcare. Requires B.Pharm degree.</span>
+             <span class="hi" style="display:none;">दवाओं और स्वास्थ्य सेवा में कार्य करता है। इसके लिए बी.फार्म डिग्री आवश्यक है।</span>
+          </p>
+        </div>
+        <div class="career-card">
+          <h3><span class="en">Scientist</span><span class="hi" style="display:none;">वैज्ञानिक</span></h3>
+          <p><span class="en">Work in research labs or ISRO/DRDO. Requires B.Sc., M.Sc., or research degrees.</span>
+             <span class="hi" style="display:none;">अनुसंधान प्रयोगशालाओं या ISRO/DRDO में कार्य। इसके लिए B.Sc., M.Sc. या शोध डिग्री आवश्यक है।</span>
+          </p>
+        </div>
+      </div>
+
+      <!-- Commerce Stream -->
+      <h3 class="section-title">Commerce Stream</h3>
+      <div class="career-container">
+        <div class="career-card">
+          <h3><span class="en">Chartered Accountant (CA)</span><span class="hi" style="display:none;">चार्टर्ड अकाउंटेंट (सीए)</span></h3>
+          <p><span class="en">Expert in accounting, tax, and audit. Requires passing CA Foundation and further exams.</span>
+             <span class="hi" style="display:none;">लेखांकन, कर और ऑडिट में विशेषज्ञ। इसके लिए CA फाउंडेशन और आगे की परीक्षाएं पास करनी होती हैं।</span>
+          </p>
+        </div>
+        <div class="career-card">
+          <h3><span class="en">Company Secretary (CS)</span><span class="hi" style="display:none;">कंपनी सेक्रेटरी (सीएस)</span></h3>
+          <p><span class="en">Handles legal and financial records of a company. Requires CS Foundation.</span>
+             <span class="hi" style="display:none;">कंपनी के कानूनी और वित्तीय रिकॉर्ड को संभालता है। इसके लिए CS फाउंडेशन आवश्यक है।</span>
+          </p>
+        </div>
+        <div class="career-card">
+          <h3><span class="en">Banking Professional</span><span class="hi" style="display:none;">बैंकिंग प्रोफेशनल</span></h3>
+          <p><span class="en">Work in public/private sector banks. Requires graduation + banking exams (IBPS, SBI PO).</span>
+             <span class="hi" style="display:none;">सरकारी/निजी बैंकों में कार्य। इसके लिए स्नातक और बैंकिंग परीक्षाएं (IBPS, SBI PO) आवश्यक हैं।</span>
+          </p>
+        </div>
+        <div class="career-card">
+          <h3><span class="en">Stock Market Analyst</span><span class="hi" style="display:none;">स्टॉक मार्केट एनालिस्ट</span></h3>
+          <p><span class="en">Analyzes and advises on market trends and investments. Requires finance/economics background.</span>
+             <span class="hi" style="display:none;">बाजार रुझानों और निवेश पर विश्लेषण व सलाह देता है। इसके लिए वित्त/अर्थशास्त्र की पृष्ठभूमि आवश्यक है।</span>
+          </p>
+        </div>
+      </div>
+
+      <!-- Arts Stream -->
+      <h3 class="section-title">Arts / Humanities Stream</h3>
+      <div class="career-container">
+        <div class="career-card">
+          <h3><span class="en">IAS / Civil Services</span><span class="hi" style="display:none;">आईएएस / सिविल सेवा</span></h3>
+          <p><span class="en">Prestigious government job via UPSC. Requires graduation and strong general knowledge.</span>
+             <span class="hi" style="display:none;">UPSC के माध्यम से प्रतिष्ठित सरकारी नौकरी। इसके लिए स्नातक और मजबूत सामान्य ज्ञान आवश्यक है।</span>
+          </p>
+        </div>
+        <div class="career-card">
+          <h3><span class="en">Journalist / Media</span><span class="hi" style="display:none;">पत्रकार / मीडिया</span></h3>
+          <p><span class="en">Reporting, anchoring, or writing news. Requires BA in Journalism or Mass Comm.</span>
+             <span class="hi" style="display:none;">रिपोर्टिंग, एंकरिंग या समाचार लेखन। इसके लिए पत्रकारिता या मास कम्युनिकेशन में बीए आवश्यक है।</span>
+          </p>
+        </div>
+        <div class="career-card">
+          <h3><span class="en">Psychologist</span><span class="hi" style="display:none;">मनोवैज्ञानिक</span></h3>
+          <p><span class="en">Works with mental health and behavior. Requires BA/B.Sc. in Psychology, then M.A./M.Sc.</span>
+             <span class="hi" style="display:none;">मानसिक स्वास्थ्य और व्यवहार से संबंधित कार्य। इसके लिए BA/B.Sc. और फिर M.A./M.Sc. आवश्यक है।</span>
+          </p>
+        </div>
+        <div class="career-card">
+          <h3><span class="en">Teacher / Lecturer</span><span class="hi" style="display:none;">शिक्षक / व्याख्याता</span></h3>
+          <p><span class="en">Teach in schools or colleges. Requires B.Ed. or NET qualification.</span>
+             <span class="hi" style="display:none;">स्कूल या कॉलेजों में पढ़ाना। इसके लिए बी.एड. या नेट पात्रता आवश्यक है।</span>
+          </p>
+        </div>
+      </div>
+
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 Career Help Desk | Guiding Futures</p>
+  </footer>
+
+  <script>
+    function switchLanguage() {
+      const lang = document.getElementById("language-select").value;
+      const englishTexts = document.querySelectorAll(".en");
+      const hindiTexts = document.querySelectorAll(".hi");
+
+      if (lang === "hi") {
+        englishTexts.forEach(el => el.style.display = "none");
+        hindiTexts.forEach(el => el.style.display = "inline");
+      } else {
+        englishTexts.forEach(el => el.style.display = "inline");
+        hindiTexts.forEach(el => el.style.display = "none");
+      }
+    }
+  </script>
+
+</body>
+</html>
